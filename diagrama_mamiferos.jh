@@ -1,0 +1,58 @@
+
+
+enum TipoMamifero{
+	GATO, MACACO, CAHORRO, RATO
+}
+enum Sexo{
+	MACHO, FEMEA
+}
+enum TipoInseto{
+	BARATA, BESOURO
+}
+
+entity Mamifero{
+	nome String
+    tipo Sexo
+    apelido String
+	tipo TipoMamifero
+    numero Integer
+    altura Double
+    peso Double
+    comprimento Double
+}
+
+
+entity Inseto{
+	tipo TipoInseto
+    numero Integer
+    altura Double
+    peso Double
+    comprimento Double
+}
+
+entity ObservacaoAnimal{
+	data ZonedDateTime
+    local String
+    comprimento Double
+    altura Double
+    peso Double
+
+}
+
+entity ObservacaoInseto{
+	data ZonedDateTime
+    local String
+    quantidade Integer
+
+}
+
+entity Loja{
+	nome String
+}
+
+relationship OneToMany{
+	Mamifero{filhotes} to Mamifero{progenitora}
+    //esquerda o que tem a lista (filhos)
+    //direita oq que vai receber a lista (mãe)
+    Loja to Mamifero
+}

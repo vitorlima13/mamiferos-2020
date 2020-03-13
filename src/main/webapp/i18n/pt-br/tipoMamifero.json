@@ -1,0 +1,11 @@
+{
+  "mamiferos2020App": {
+    "TipoMamifero": {
+      "null": "",
+      "GATO": "GATO",
+      "MACACO": "MACACO",
+      "CAHORRO": "CAHORRO",
+      "RATO": "RATO"
+    }
+  }
+}

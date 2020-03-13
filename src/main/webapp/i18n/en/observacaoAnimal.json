@@ -1,0 +1,26 @@
+{
+  "mamiferos2020App": {
+    "observacaoAnimal": {
+      "home": {
+        "title": "Observacao Animals",
+        "createLabel": "Create a new Observacao Animal",
+        "createOrEditLabel": "Create or edit a Observacao Animal",
+        "notFound": "No Observacao Animals found"
+      },
+      "created": "A new Observacao Animal is created with identifier {{ param }}",
+      "updated": "A Observacao Animal is updated with identifier {{ param }}",
+      "deleted": "A Observacao Animal is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Observacao Animal {{ id }}?"
+      },
+      "detail": {
+        "title": "Observacao Animal"
+      },
+      "data": "Data",
+      "local": "Local",
+      "comprimento": "Comprimento",
+      "altura": "Altura",
+      "peso": "Peso"
+    }
+  }
+}

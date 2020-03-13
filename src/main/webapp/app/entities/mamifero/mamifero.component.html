@@ -1,0 +1,85 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="mamiferos2020App.mamifero.home.title">Mamiferos</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-mamifero" [routerLink]="['/mamifero/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="mamiferos2020App.mamifero.home.createLabel">
+            Create a new Mamifero
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="mamiferos?.length === 0">
+        <span jhiTranslate="mamiferos2020App.mamifero.home.notFound">No mamiferos found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="mamiferos?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.nome">Nome</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.tipo">Tipo</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.apelido">Apelido</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.numero">Numero</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.altura">Altura</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.peso">Peso</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.comprimento">Comprimento</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.progenitora">Progenitora</span></th>
+                    <th scope="col" ><span jhiTranslate="mamiferos2020App.mamifero.loja">Loja</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mamifero of mamiferos ;trackBy: trackId">
+                    <td><a [routerLink]="['/mamifero', mamifero.id, 'view']">{{ mamifero.id }}</a></td>
+                    <td>{{ mamifero.nome }}</td>
+                    <td jhiTranslate="{{ 'mamiferos2020App.TipoMamifero.' + mamifero.tipo }}">{{ mamifero.tipo }}</td>
+                    <td>{{ mamifero.apelido }}</td>
+                    <td>{{ mamifero.numero }}</td>
+                    <td>{{ mamifero.altura }}</td>
+                    <td>{{ mamifero.peso }}</td>
+                    <td>{{ mamifero.comprimento }}</td>
+                    <td>
+                        <div *ngIf="mamifero.progenitora">
+                            <a [routerLink]="['/mamifero', mamifero.progenitora?.id, 'view']" >{{ mamifero.progenitora?.id }}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngIf="mamifero.loja">
+                            <a [routerLink]="['/loja', mamifero.loja?.id, 'view']" >{{ mamifero.loja?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/mamifero', mamifero.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/mamifero', mamifero.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(mamifero)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
