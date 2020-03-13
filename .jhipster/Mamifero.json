@@ -1,0 +1,67 @@
+{
+    "name": "Mamifero",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tipo",
+            "fieldType": "TipoMamifero",
+            "fieldValues": "GATO,MACACO,CAHORRO,RATO"
+        },
+        {
+            "fieldName": "apelido",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "altura",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "peso",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "comprimento",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mamifero",
+            "otherEntityRelationshipName": "progenitora",
+            "relationshipName": "filhotes"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mamifero",
+            "otherEntityRelationshipName": "filhotes",
+            "relationshipName": "progenitora",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "loja",
+            "otherEntityRelationshipName": "mamifero",
+            "relationshipName": "loja",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200313185500",
+    "entityTableName": "mamifero",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

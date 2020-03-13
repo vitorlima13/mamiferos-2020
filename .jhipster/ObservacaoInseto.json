@@ -1,0 +1,29 @@
+{
+    "name": "ObservacaoInseto",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "local",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "quantidade",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200313185800",
+    "entityTableName": "observacao_inseto",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

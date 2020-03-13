@@ -1,0 +1,31 @@
+{
+  "mamiferos2020App": {
+    "mamifero": {
+      "home": {
+        "title": "Mamiferos",
+        "createLabel": "Create a new Mamifero",
+        "createOrEditLabel": "Create or edit a Mamifero",
+        "notFound": "No Mamiferos found"
+      },
+      "created": "A new Mamifero is created with identifier {{ param }}",
+      "updated": "A Mamifero is updated with identifier {{ param }}",
+      "deleted": "A Mamifero is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mamifero {{ id }}?"
+      },
+      "detail": {
+        "title": "Mamifero"
+      },
+      "nome": "Nome",
+      "tipo": "Tipo",
+      "apelido": "Apelido",
+      "numero": "Numero",
+      "altura": "Altura",
+      "peso": "Peso",
+      "comprimento": "Comprimento",
+      "filhotes": "Filhotes",
+      "progenitora": "Progenitora",
+      "loja": "Loja"
+    }
+  }
+}

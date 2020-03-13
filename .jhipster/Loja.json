@@ -1,0 +1,28 @@
+{
+    "name": "Loja",
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mamifero",
+            "otherEntityRelationshipName": "loja",
+            "relationshipName": "mamifero"
+        }
+    ],
+    "changelogDate": "20200313185900",
+    "entityTableName": "loja",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

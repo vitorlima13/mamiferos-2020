@@ -1,0 +1,26 @@
+{
+  "mamiferos2020App": {
+    "inseto": {
+      "home": {
+        "title": "Insetos",
+        "createLabel": "Criar novo Inseto",
+        "createOrEditLabel": "Criar ou editar Inseto",
+        "notFound": "Nenhum Inseto encontrado"
+      },
+      "created": "Um novo Inseto foi criado com o identificador {{ param }}",
+      "updated": "Um Inseto foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Inseto foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Inseto {{ id }}?"
+      },
+      "detail": {
+        "title": "Inseto"
+      },
+      "tipo": "Tipo",
+      "numero": "Numero",
+      "altura": "Altura",
+      "peso": "Peso",
+      "comprimento": "Comprimento"
+    }
+  }
+}

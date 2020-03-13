@@ -1,0 +1,24 @@
+{
+  "mamiferos2020App": {
+    "observacaoInseto": {
+      "home": {
+        "title": "Observacao Insetos",
+        "createLabel": "Create a new Observacao Inseto",
+        "createOrEditLabel": "Create or edit a Observacao Inseto",
+        "notFound": "No Observacao Insetos found"
+      },
+      "created": "A new Observacao Inseto is created with identifier {{ param }}",
+      "updated": "A Observacao Inseto is updated with identifier {{ param }}",
+      "deleted": "A Observacao Inseto is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Observacao Inseto {{ id }}?"
+      },
+      "detail": {
+        "title": "Observacao Inseto"
+      },
+      "data": "Data",
+      "local": "Local",
+      "quantidade": "Quantidade"
+    }
+  }
+}

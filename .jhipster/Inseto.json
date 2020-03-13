@@ -1,0 +1,38 @@
+{
+    "name": "Inseto",
+    "fields": [
+        {
+            "fieldName": "tipo",
+            "fieldType": "TipoInseto",
+            "fieldValues": "BARATA,BESOURO"
+        },
+        {
+            "fieldName": "numero",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "altura",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "peso",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "comprimento",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200313185600",
+    "entityTableName": "inseto",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

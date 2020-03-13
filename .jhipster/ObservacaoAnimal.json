@@ -1,0 +1,37 @@
+{
+    "name": "ObservacaoAnimal",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "local",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "comprimento",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "altura",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "peso",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200313185700",
+    "entityTableName": "observacao_animal",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

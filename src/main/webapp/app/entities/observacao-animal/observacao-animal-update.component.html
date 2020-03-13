@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-observacao-animal-heading" jhiTranslate="mamiferos2020App.observacaoAnimal.home.createOrEditLabel">Create or edit a Observacao Animal</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.observacaoAnimal.data" for="field_data">Data</label>
+                    <div class="d-flex">
+                        <input id="field_data" type="datetime-local" class="form-control" name="data" formControlName="data" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.observacaoAnimal.local" for="field_local">Local</label>
+                    <input type="text" class="form-control" name="local" id="field_local"
+                           formControlName="local"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.observacaoAnimal.comprimento" for="field_comprimento">Comprimento</label>
+                    <input type="number" class="form-control" name="comprimento" id="field_comprimento"
+                           formControlName="comprimento"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.observacaoAnimal.altura" for="field_altura">Altura</label>
+                    <input type="number" class="form-control" name="altura" id="field_altura"
+                           formControlName="altura"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.observacaoAnimal.peso" for="field_peso">Peso</label>
+                    <input type="number" class="form-control" name="peso" id="field_peso"
+                           formControlName="peso"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-inseto-heading" jhiTranslate="mamiferos2020App.inseto.home.createOrEditLabel">Create or edit a Inseto</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.inseto.tipo" for="field_tipo">Tipo</label>
+                    <select class="form-control" name="tipo" formControlName="tipo" id="field_tipo">
+                        <option value="BARATA">{{ 'mamiferos2020App.TipoInseto.BARATA' | translate }}</option>
+                        <option value="BESOURO">{{ 'mamiferos2020App.TipoInseto.BESOURO' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.inseto.numero" for="field_numero">Numero</label>
+                    <input type="number" class="form-control" name="numero" id="field_numero"
+                           formControlName="numero"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.inseto.altura" for="field_altura">Altura</label>
+                    <input type="number" class="form-control" name="altura" id="field_altura"
+                           formControlName="altura"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.inseto.peso" for="field_peso">Peso</label>
+                    <input type="number" class="form-control" name="peso" id="field_peso"
+                           formControlName="peso"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="mamiferos2020App.inseto.comprimento" for="field_comprimento">Comprimento</label>
+                    <input type="number" class="form-control" name="comprimento" id="field_comprimento"
+                           formControlName="comprimento"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
